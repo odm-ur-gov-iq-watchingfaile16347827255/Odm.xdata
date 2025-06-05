@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Aur QR Verification API
+  version: 1.0.0
+  description: |
+    تحقق من توقيع رقمي لرسالة QR عبر POST /api/verify
+servers:
+  - url: https://verify.aurverify.net
+paths:
+  /api/verify:
+    post:
+      summary: تحقق من توقيع QR
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                msg:
+                  type: string
+                  example: "8EKDPLB*adecgh+"
+                sig:
+                  type: string
+                  example: "dY72hrylSW..."
+      responses:
+        '200':
+          description: نتيجة التحقق
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  message:
+                    type: string

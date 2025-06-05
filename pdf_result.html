@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نتيجة التحقق الرقمي</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            direction: rtl;
+            padding: 50px;
+        }
+        .result-box {
+            background: white;
+            border: 2px solid #4CAF50;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .status {
+            font-size: 24px;
+            color: green;
+            margin-bottom: 20px;
+        }
+        .details {
+            text-align: right;
+            direction: rtl;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <div class="status">✅ التوقيع الرقمي صحيح</div>
+        <div class="details">
+            <p><strong>رقم الوثيقة:</strong> 8EKDPLB*adecgh+</p>
+            <p><strong>حالة التوقيع:</strong> تم التحقق من صحة التوقيع بنجاح باستخدام المفتاح العام</p>
+            <p><strong>الجهة المصدّرة:</strong> نظام تحقق تجريبي</p>
+            <p><strong>التاريخ:</strong> {{ date }}</p>
+        </div>
+    </div>
+</body>
+</html>
